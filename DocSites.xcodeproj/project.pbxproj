@@ -15,6 +15,20 @@
 		C780274F262862D100BCFFC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802724262862CF00BCFFC9 /* ContentView.swift */; };
 		C7802750262862D100BCFFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7802725262862D100BCFFC9 /* Assets.xcassets */; };
 		C7802751262862D100BCFFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7802725262862D100BCFFC9 /* Assets.xcassets */; };
+		C78027702628644400BCFFC9 /* EntityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C780276F2628644400BCFFC9 /* EntityView.swift */; };
+		C78027712628644400BCFFC9 /* EntityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C780276F2628644400BCFFC9 /* EntityView.swift */; };
+		C7FE4107262873540007CE97 /* Kalpurush.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7FE4105262873540007CE97 /* Kalpurush.ttf */; };
+		C7FE4108262873540007CE97 /* KalpurushFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FE4106262873540007CE97 /* KalpurushFont.swift */; };
+		C7FE410D262873B10007CE97 /* Kalpurush.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7FE4105262873540007CE97 /* Kalpurush.ttf */; };
+		C7FE4112262873B50007CE97 /* KalpurushFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FE4106262873540007CE97 /* KalpurushFont.swift */; };
+		C7FE4118262879DB0007CE97 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FE4117262879DB0007CE97 /* Entity.swift */; };
+		C7FE4119262879DB0007CE97 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FE4117262879DB0007CE97 /* Entity.swift */; };
+		C7FE411F26287DB80007CE97 /* SiteItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FE411E26287DB80007CE97 /* SiteItemView.swift */; };
+		C7FE412026287DB80007CE97 /* SiteItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FE411E26287DB80007CE97 /* SiteItemView.swift */; };
+		C7FE41262628A8170007CE97 /* EntityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FE41252628A8170007CE97 /* EntityDetail.swift */; };
+		C7FE41272628A8170007CE97 /* EntityDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FE41252628A8170007CE97 /* EntityDetail.swift */; };
+		C7FE412D2628B32C0007CE97 /* DismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FE412C2628B32C0007CE97 /* DismissButton.swift */; };
+		C7FE412E2628B32C0007CE97 /* DismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FE412C2628B32C0007CE97 /* DismissButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +63,13 @@
 		C7802745262862D100BCFFC9 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7802749262862D100BCFFC9 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		C780274B262862D100BCFFC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C780276F2628644400BCFFC9 /* EntityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityView.swift; sourceTree = "<group>"; };
+		C7FE4105262873540007CE97 /* Kalpurush.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kalpurush.ttf; sourceTree = "<group>"; };
+		C7FE4106262873540007CE97 /* KalpurushFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KalpurushFont.swift; sourceTree = "<group>"; };
+		C7FE4117262879DB0007CE97 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		C7FE411E26287DB80007CE97 /* SiteItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteItemView.swift; sourceTree = "<group>"; };
+		C7FE41252628A8170007CE97 /* EntityDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityDetail.swift; sourceTree = "<group>"; };
+		C7FE412C2628B32C0007CE97 /* DismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DismissButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,8 +119,11 @@
 		C7802722262862CF00BCFFC9 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				C7FE4104262872E40007CE97 /* Font */,
+				C780276E2628641600BCFFC9 /* ItemView */,
+				C78027692628640500BCFFC9 /* Model */,
+				C7802768262863F700BCFFC9 /* Screen */,
 				C7802723262862CF00BCFFC9 /* DocSitesApp.swift */,
-				C7802724262862CF00BCFFC9 /* ContentView.swift */,
 				C7802725262862D100BCFFC9 /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -149,6 +173,42 @@
 				C780274B262862D100BCFFC9 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		C7802768262863F700BCFFC9 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C7802724262862CF00BCFFC9 /* ContentView.swift */,
+				C7FE41252628A8170007CE97 /* EntityDetail.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		C78027692628640500BCFFC9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C7FE4117262879DB0007CE97 /* Entity.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C780276E2628641600BCFFC9 /* ItemView */ = {
+			isa = PBXGroup;
+			children = (
+				C780276F2628644400BCFFC9 /* EntityView.swift */,
+				C7FE411E26287DB80007CE97 /* SiteItemView.swift */,
+				C7FE412C2628B32C0007CE97 /* DismissButton.swift */,
+			);
+			path = ItemView;
+			sourceTree = "<group>";
+		};
+		C7FE4104262872E40007CE97 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				C7FE4105262873540007CE97 /* Kalpurush.ttf */,
+				C7FE4106262873540007CE97 /* KalpurushFont.swift */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7FE4107262873540007CE97 /* Kalpurush.ttf in Resources */,
 				C7802750262862D100BCFFC9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,6 +344,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7FE410D262873B10007CE97 /* Kalpurush.ttf in Resources */,
 				C7802751262862D100BCFFC9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,7 +370,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7FE41262628A8170007CE97 /* EntityDetail.swift in Sources */,
+				C7FE4108262873540007CE97 /* KalpurushFont.swift in Sources */,
+				C7FE4118262879DB0007CE97 /* Entity.swift in Sources */,
 				C780274E262862D100BCFFC9 /* ContentView.swift in Sources */,
+				C78027702628644400BCFFC9 /* EntityView.swift in Sources */,
+				C7FE411F26287DB80007CE97 /* SiteItemView.swift in Sources */,
+				C7FE412D2628B32C0007CE97 /* DismissButton.swift in Sources */,
 				C780274C262862D100BCFFC9 /* DocSitesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -317,7 +385,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C7FE41272628A8170007CE97 /* EntityDetail.swift in Sources */,
+				C7FE4112262873B50007CE97 /* KalpurushFont.swift in Sources */,
+				C7FE4119262879DB0007CE97 /* Entity.swift in Sources */,
 				C780274F262862D100BCFFC9 /* ContentView.swift in Sources */,
+				C78027712628644400BCFFC9 /* EntityView.swift in Sources */,
+				C7FE412026287DB80007CE97 /* SiteItemView.swift in Sources */,
+				C7FE412E2628B32C0007CE97 /* DismissButton.swift in Sources */,
 				C780274D262862D100BCFFC9 /* DocSitesApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,7 +552,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "SNN-Systems.DocSites";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = snz.docSites.ios;
 				PRODUCT_NAME = DocSites;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -499,7 +574,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "SNN-Systems.DocSites";
+				MARKETING_VERSION = 1.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = snz.docSites.ios;
 				PRODUCT_NAME = DocSites;
 				SDKROOT = iphoneos;
 				SWIFT_VERSION = 5.0;
