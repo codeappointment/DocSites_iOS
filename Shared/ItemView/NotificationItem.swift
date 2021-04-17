@@ -13,11 +13,7 @@ struct NotificationItem: View {
     
     var body: some View {
         HStack {
-            Text(title)
-                .font(.custom("Kalpursh", size: 22, relativeTo: .title2))
-            Spacer()
-            Toggle("", isOn: $isOn)
-                .fixedSize()
+            Toggle(title, isOn: $isOn)
         }
         .padding()
     }
