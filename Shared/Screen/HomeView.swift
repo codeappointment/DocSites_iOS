@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct HomeView: View {
     
     @Namespace var namespace
     @State var selectedEntity: Entity? = nil
@@ -72,9 +72,9 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        HomeView()
             .previewDevice(PreviewDevice(rawValue: "iPhone 12"))
     }
 }

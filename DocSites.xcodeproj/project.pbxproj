@@ -13,12 +13,14 @@
 		C780274A262862D100BCFFC9 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802749262862D100BCFFC9 /* Tests_macOS.swift */; };
 		C780274C262862D100BCFFC9 /* DocSitesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802723262862CF00BCFFC9 /* DocSitesApp.swift */; };
 		C780274D262862D100BCFFC9 /* DocSitesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802723262862CF00BCFFC9 /* DocSitesApp.swift */; };
-		C780274E262862D100BCFFC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802724262862CF00BCFFC9 /* ContentView.swift */; };
-		C780274F262862D100BCFFC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802724262862CF00BCFFC9 /* ContentView.swift */; };
+		C780274E262862D100BCFFC9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802724262862CF00BCFFC9 /* HomeView.swift */; };
+		C780274F262862D100BCFFC9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7802724262862CF00BCFFC9 /* HomeView.swift */; };
 		C7802750262862D100BCFFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7802725262862D100BCFFC9 /* Assets.xcassets */; };
 		C7802751262862D100BCFFC9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7802725262862D100BCFFC9 /* Assets.xcassets */; };
 		C78027702628644400BCFFC9 /* EntityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C780276F2628644400BCFFC9 /* EntityView.swift */; };
 		C78027712628644400BCFFC9 /* EntityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C780276F2628644400BCFFC9 /* EntityView.swift */; };
+		C79FD375262B620C00F126DC /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FD374262B620C00F126DC /* GradientBackground.swift */; };
+		C79FD376262B620C00F126DC /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FD374262B620C00F126DC /* GradientBackground.swift */; };
 		C7FE4107262873540007CE97 /* Kalpurush.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7FE4105262873540007CE97 /* Kalpurush.ttf */; };
 		C7FE4108262873540007CE97 /* KalpurushFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7FE4106262873540007CE97 /* KalpurushFont.swift */; };
 		C7FE410D262873B10007CE97 /* Kalpurush.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7FE4105262873540007CE97 /* Kalpurush.ttf */; };
@@ -60,7 +62,7 @@
 		49E329B8538AAA24B2C23141 /* Pods_DocSites__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DocSites__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83667583630CDF3E30C088B4 /* Pods-DocSites (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocSites (macOS).debug.xcconfig"; path = "Target Support Files/Pods-DocSites (macOS)/Pods-DocSites (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		C7802723262862CF00BCFFC9 /* DocSitesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocSitesApp.swift; sourceTree = "<group>"; };
-		C7802724262862CF00BCFFC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C7802724262862CF00BCFFC9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		C7802725262862D100BCFFC9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C780272A262862D100BCFFC9 /* DocSites.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocSites.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C780272D262862D100BCFFC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 		C7802749262862D100BCFFC9 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		C780274B262862D100BCFFC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C780276F2628644400BCFFC9 /* EntityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityView.swift; sourceTree = "<group>"; };
+		C79FD374262B620C00F126DC /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		C7FE4105262873540007CE97 /* Kalpurush.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Kalpurush.ttf; sourceTree = "<group>"; };
 		C7FE4106262873540007CE97 /* KalpurushFont.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KalpurushFont.swift; sourceTree = "<group>"; };
 		C7FE4117262879DB0007CE97 /* Entity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
@@ -215,7 +218,7 @@
 		C7802768262863F700BCFFC9 /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				C7802724262862CF00BCFFC9 /* ContentView.swift */,
+				C7802724262862CF00BCFFC9 /* HomeView.swift */,
 				C7FE41252628A8170007CE97 /* EntityDetail.swift */,
 				C7FE4144262B05CE0007CE97 /* SettingView.swift */,
 			);
@@ -226,6 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				C7FE4117262879DB0007CE97 /* Entity.swift */,
+				C79FD374262B620C00F126DC /* GradientBackground.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -498,7 +502,8 @@
 				C7FE4108262873540007CE97 /* KalpurushFont.swift in Sources */,
 				C7FE4118262879DB0007CE97 /* Entity.swift in Sources */,
 				C7FE4145262B05CE0007CE97 /* SettingView.swift in Sources */,
-				C780274E262862D100BCFFC9 /* ContentView.swift in Sources */,
+				C780274E262862D100BCFFC9 /* HomeView.swift in Sources */,
+				C79FD375262B620C00F126DC /* GradientBackground.swift in Sources */,
 				C78027702628644400BCFFC9 /* EntityView.swift in Sources */,
 				C7FE411F26287DB80007CE97 /* SiteItemView.swift in Sources */,
 				C7FE414C262B06EB0007CE97 /* NotificationItem.swift in Sources */,
@@ -513,9 +518,10 @@
 			files = (
 				C7FE41272628A8170007CE97 /* EntityDetail.swift in Sources */,
 				C7FE4119262879DB0007CE97 /* Entity.swift in Sources */,
-				C780274F262862D100BCFFC9 /* ContentView.swift in Sources */,
+				C780274F262862D100BCFFC9 /* HomeView.swift in Sources */,
 				C78027712628644400BCFFC9 /* EntityView.swift in Sources */,
 				C7FE412026287DB80007CE97 /* SiteItemView.swift in Sources */,
+				C79FD376262B620C00F126DC /* GradientBackground.swift in Sources */,
 				C7FE4146262B05CE0007CE97 /* SettingView.swift in Sources */,
 				C7FE412E2628B32C0007CE97 /* DismissButton.swift in Sources */,
 				C780274D262862D100BCFFC9 /* DocSitesApp.swift in Sources */,
