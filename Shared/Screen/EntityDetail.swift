@@ -30,7 +30,9 @@ struct EntityDetail: View {
             VStack {
                 ScrollView {
                     ForEach(entity.items) { item in
-                        SiteItemView(title: item.title)
+                        NavigationLink(destination: WebsiteView(url: "https://www.bsmmu.edu.bd")) {
+                            SiteItemView(title: item.title)
+                        }
                         Divider()
                             
                     }
@@ -70,7 +72,7 @@ struct EntityDetail: View {
            
             Spacer()
         }.padding(.all)
-        .background(Color.orange)
+        .gradientBackground()
         .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
         .shadow(color: .gray, radius: 20, x: 3, y: 2)
     }

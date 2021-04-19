@@ -39,7 +39,7 @@ struct EntityView: View {
           
         }
         .padding(.all)
-        .gradientBacground()
+        .gradientBackground()
         .clipShape(RoundedRectangle(cornerRadius: 10, style: .continuous))
         .shadow(color: .gray, radius: 20, x: 3, y: 2)
     }
