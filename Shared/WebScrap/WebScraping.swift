@@ -5,6 +5,11 @@
 //  Created by Shahriar Nasim Nafi on 19/4/21.
 //
 
+/// Problem
+// Function declares an opaque return type, but the return statements in its body do not have matching underlying types
+/// Solution
+// Wrap in AnyView(view)
+
 import SwiftUI
 
 struct WebScraping {
@@ -12,257 +17,54 @@ struct WebScraping {
     let parentIndex: Int
     let childIndex: Int
     
-    func dataForItem(title: String) {
+    static func dataForItem(parentIndex: Int,  childIndex: Int,  title: String) -> some View {
         switch parentIndex {
         case 1:
             switch childIndex {
             case 1:
-                NavigationLink(destination: WebsiteView(url: "https://www.bsmmu.edu.bd")) {
+                return AnyView(NavigationLink(destination: WebsiteView(url: "https://www.bsmmu.edu.bd")) {
                     SiteItemView(title: title)
-                }
+                })
             case 2:
-                break
+                return AnyView(NavigationLink(destination: WebsiteView(url: "https://www.bsmmu.edu.bd")) {
+                    SiteItemView(title: title)
+                })
             case 3:
-                break
+                return AnyView(NavigationLink(destination: WebsiteView(url: "https://www.bsmmu.edu.bd")) {
+                    SiteItemView(title: title)
+                })
             case 4:
-                break
+                return AnyView(NavigationLink(destination: WebsiteView(url: "https://www.bsmmu.edu.bd")) {
+                    SiteItemView(title: title)
+                })
             case 5:
-                break
-            case 6:
-                break
-            case 7:
-                break
-            case 8:
-                break
-            default:
-                break
+                return AnyView(SiteItemView(title: title))
                 
-            }
-        case 2:
-            switch childIndex {
-            case 1:
-                break
-            case 2:
-                break
-            case 3:
-                break
-            case 4:
-                break
-            case 5:
-                break
             case 6:
-                break
+                return AnyView(NavigationLink(destination: WebsiteView(url: "https://www.bsmmu.edu.bd/?page=menu&content=139020387254")) {
+                    SiteItemView(title: title)
+                })
             case 7:
-                break
+                return AnyView(NavigationLink(destination: WebsiteView(url: "https://www.bsmmu.edu.bd/?page=menu&content=139020390785")) {
+                    SiteItemView(title: title)
+                })
             case 8:
-                break
+                return AnyView(NavigationLink(destination: WebsiteView(url: "https://www.bsmmu.edu.bd")) {
+                    SiteItemView(title: title)
+                })
             default:
-                break
-                
+                return AnyView(NavigationLink(destination: WebsiteView(url: "https://www.bsmmu.edu.bd")) {
+                    SiteItemView(title: title)
+                })
             }
-        case 3:
-            switch childIndex {
-            case 1:
-                break
-            case 2:
-                break
-            case 3:
-                break
-            case 4:
-                break
-            case 5:
-                break
-            case 6:
-                break
-            case 7:
-                break
-            case 8:
-                break
-            default:
-                break
-                
-            }
-        case 4:
-            switch childIndex {
-            case 1:
-                break
-            case 2:
-                break
-            case 3:
-                break
-            case 4:
-                break
-            case 5:
-                break
-            case 6:
-                break
-            case 7:
-                break
-            case 8:
-                break
-            default:
-                break
-                
-            }
-        case 5:
-            switch childIndex {
-            case 1:
-                break
-            case 2:
-                break
-            case 3:
-                break
-            case 4:
-                break
-            case 5:
-                break
-            case 6:
-                break
-            case 7:
-                break
-            case 8:
-                break
-            default:
-                break
-                
-            }
-        case 6:
-            switch childIndex {
-            case 1:
-                break
-            case 2:
-                break
-            case 3:
-                break
-            case 4:
-                break
-            case 5:
-                break
-            case 6:
-                break
-            case 7:
-                break
-            case 8:
-                break
-            default:
-                break
-                
-            }
-        case 7:
-            switch childIndex {
-            case 1:
-                break
-            case 2:
-                break
-            case 3:
-                break
-            case 4:
-                break
-            case 5:
-                break
-            case 6:
-                break
-            case 7:
-                break
-            case 8:
-                break
-            default:
-                break
-                
-            }
-        case 8:
-            switch childIndex {
-            case 1:
-                break
-            case 2:
-                break
-            case 3:
-                break
-            case 4:
-                break
-            case 5:
-                break
-            case 6:
-                break
-            case 7:
-                break
-            case 8:
-                break
-            default:
-                break
-                
-            }
-        case 9:
-            switch childIndex {
-            case 1:
-                break
-            case 2:
-                break
-            case 3:
-                break
-            case 4:
-                break
-            case 5:
-                break
-            case 6:
-                break
-            case 7:
-                break
-            case 8:
-                break
-            default:
-                break
-                
-            }
-        case 10:
-            switch childIndex {
-            case 1:
-                break
-            case 2:
-                break
-            case 3:
-                break
-            case 4:
-                break
-            case 5:
-                break
-            case 6:
-                break
-            case 7:
-                break
-            case 8:
-                break
-            default:
-                break
-                
-            }
-        case 11:
-            switch childIndex {
-            case 1:
-                break
-            case 2:
-                break
-            case 3:
-                break
-            case 4:
-                break
-            case 5:
-                break
-            case 6:
-                break
-            case 7:
-                break
-            case 8:
-                break
-            default:
-                break
-            }
-        default:
-            break
             
+        default:
+            return AnyView(NavigationLink(destination: WebsiteView(url: "https://www.bsmmu.edu.bd")) {
+                SiteItemView(title: title)                
+            })
         }
+        
+        
+        
     }
-    
-    
 }
-

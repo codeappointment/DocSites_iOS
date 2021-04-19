@@ -30,9 +30,9 @@ struct EntityDetail: View {
             VStack {
                 ScrollView {
                     ForEach(entity.items) { item in
-                        NavigationLink(destination: WebsiteView(url: "https://www.bsmmu.edu.bd")) {
-                            SiteItemView(title: item.title)
-                        }
+                        
+                        WebScraping.dataForItem(parentIndex: 1, childIndex: item.id, title: item.title)
+                        
                         Divider()
                             
                     }
