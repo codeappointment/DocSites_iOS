@@ -14,6 +14,8 @@ struct SiteItemView: View {
             HStack {
                 Text(title)
                     .font(.title2)
+                    .foregroundColor(.blue)
+                    
                 Spacer()
             }
         }

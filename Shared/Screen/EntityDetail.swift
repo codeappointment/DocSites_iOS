@@ -10,7 +10,8 @@ import SwiftUI
 struct EntityDetail: View {
     var entity: Entity = entities.first!
     var namespace: Namespace.ID
-    
+    @EnvironmentObject var webScrap: WebScrap
+    @State var showModal: Bool = false
     @ViewBuilder
     var body: some View {
         
@@ -30,9 +31,7 @@ struct EntityDetail: View {
             VStack {
                 ScrollView {
                     ForEach(entity.items) { item in
-                        
-                        WebScraping.dataForItem(parentIndex: 1, childIndex: item.id, title: item.title)
-                        
+                        dataForItem(parentIndex: 1, childIndex: item.id, data: item.title)
                         Divider()
                             
                     }

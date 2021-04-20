@@ -21,6 +21,8 @@
 		C78027712628644400BCFFC9 /* EntityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C780276F2628644400BCFFC9 /* EntityView.swift */; };
 		C79972E6262D0620007F4BFD /* WebScraping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79972E5262D0620007F4BFD /* WebScraping.swift */; };
 		C79972E7262D0620007F4BFD /* WebScraping.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79972E5262D0620007F4BFD /* WebScraping.swift */; };
+		C79972ED262DF609007F4BFD /* ScrapingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79972EC262DF609007F4BFD /* ScrapingListView.swift */; };
+		C79972EE262DF609007F4BFD /* ScrapingListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79972EC262DF609007F4BFD /* ScrapingListView.swift */; };
 		C79FD375262B620C00F126DC /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FD374262B620C00F126DC /* GradientBackground.swift */; };
 		C79FD376262B620C00F126DC /* GradientBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FD374262B620C00F126DC /* GradientBackground.swift */; };
 		C79FD380262BB16D00F126DC /* WebScrap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C79FD37F262BB16D00F126DC /* WebScrap.swift */; };
@@ -88,6 +90,7 @@
 		C780274B262862D100BCFFC9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C780276F2628644400BCFFC9 /* EntityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityView.swift; sourceTree = "<group>"; };
 		C79972E5262D0620007F4BFD /* WebScraping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScraping.swift; sourceTree = "<group>"; };
+		C79972EC262DF609007F4BFD /* ScrapingListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapingListView.swift; sourceTree = "<group>"; };
 		C79FD374262B620C00F126DC /* GradientBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientBackground.swift; sourceTree = "<group>"; };
 		C79FD37F262BB16D00F126DC /* WebScrap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebScrap.swift; sourceTree = "<group>"; };
 		C7AC3075262C68850031D0CC /* ScrapingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrapingView.swift; sourceTree = "<group>"; };
@@ -240,6 +243,7 @@
 				C7802724262862CF00BCFFC9 /* HomeView.swift */,
 				C7FE41252628A8170007CE97 /* EntityDetail.swift */,
 				C7FE4144262B05CE0007CE97 /* SettingView.swift */,
+				C79972EC262DF609007F4BFD /* ScrapingListView.swift */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -545,6 +549,7 @@
 				C7FE4118262879DB0007CE97 /* Entity.swift in Sources */,
 				C7AC3076262C68850031D0CC /* ScrapingView.swift in Sources */,
 				C7AC3088262C6C080031D0CC /* WebView.swift in Sources */,
+				C79972ED262DF609007F4BFD /* ScrapingListView.swift in Sources */,
 				C7FE4145262B05CE0007CE97 /* SettingView.swift in Sources */,
 				C780274E262862D100BCFFC9 /* HomeView.swift in Sources */,
 				C79FD375262B620C00F126DC /* GradientBackground.swift in Sources */,
@@ -563,6 +568,7 @@
 			files = (
 				C7FE41272628A8170007CE97 /* EntityDetail.swift in Sources */,
 				C7FE4119262879DB0007CE97 /* Entity.swift in Sources */,
+				C79972EE262DF609007F4BFD /* ScrapingListView.swift in Sources */,
 				C780274F262862D100BCFFC9 /* HomeView.swift in Sources */,
 				C7AC3077262C68850031D0CC /* ScrapingView.swift in Sources */,
 				C7AC3091262C6C820031D0CC /* WebsiteView.swift in Sources */,

@@ -12,10 +12,31 @@ class WebScrap: ObservableObject {
     @Published var filterContent = ""
     @Published var texts = [String]()
     @Published var urls = [String]()
+    @Published var scrapingItems = [ScrapingItem]()
+    @Published  var loading: Bool = true
     
+    /// Prepare for new request and set `loading` to `true` to show `ProgressView`
     func clearArray() {
-        self.texts.removeAll()
-        self.urls.removeAll()
+        DispatchQueue.main.async {
+            self.loading = true
+            self.texts.removeAll()
+            self.urls.removeAll()
+        }
+      
+    }
+    
+    /// Update `ScrapingItem`(s)  and set `loading` to `false` to hide `ProgressView`
+    func updateItems() {
+       
+        DispatchQueue.main.async {
+            var items = [ScrapingItem]()
+            for i in 0..<self.texts.count {
+                items.append(ScrapingItem(title: self.texts[i], url: self.urls[i]))
+            }
+            self.scrapingItems = items
+            self.loading = false
+        }
+        
     }
     
     func getData() {
@@ -43,8 +64,11 @@ class WebScrap: ObservableObject {
                 let link = element[i]
                 let text = try link.text()
                 let url = try link.attr( "abs:href")
-                self.texts.append(text)
-                self.urls.append(url)
+                DispatchQueue.main.async {
+                    self.texts.append(text)
+                    self.urls.append(url)
+                }
+                
             }
         } catch {
             print(error.localizedDescription)
@@ -76,9 +100,12 @@ class WebScrap: ObservableObject {
                 let link = element[i]
                 let text = try link.text()
                 let url = try link.attr( "abs:href")
-                self.texts.append(text)
-                self.urls.append(url)
+                DispatchQueue.main.async {
+                    self.texts.append(text)
+                    self.urls.append(url)
+                }
             }
+            updateItems()
         } catch {
             print(error.localizedDescription)
         }
@@ -107,9 +134,12 @@ class WebScrap: ObservableObject {
                 let link = element[i]
                 let text = try link.text()
                 let url = try link.attr( "abs:href")
-                self.texts.append(text)
-                self.urls.append(url)
+                DispatchQueue.main.async {
+                    self.texts.append(text)
+                    self.urls.append(url)
+                }
             }
+            updateItems()
         } catch {
             print(error.localizedDescription)
         }
@@ -126,15 +156,17 @@ class WebScrap: ObservableObject {
             for i in begin..<element.count {
                 let link = element[i]
                 let url = try link.attr(attr)
-                self.urls.append(url)
                 let date = try link.select("h5").text().prefix(2) + " "
                 let month = try link.select("h5").text().dropFirst(2) + ": "
                 let notice =  try link.select("h6").text()
                 let text = date + month + notice
-                self.texts.append(String(text))
+                DispatchQueue.main.async {
+                    self.texts.append(String(text))
+                    self.urls.append(url)
+                }
                 
             }
-            
+            updateItems()
         } catch {
             print(error.localizedDescription)
         }
@@ -152,16 +184,20 @@ class WebScrap: ObservableObject {
                 let linkText = try link.text()
                 if linkText != "" {
                     let text = try link.text()
-                    self.texts.append(text)
                     let url = try link.select(tagForLink).attr(attr)
-                    self.urls.append(url)
+                    DispatchQueue.main.async {
+                        self.texts.append(text)
+                        self.urls.append(url)
+                    }
                 }
-                
-                self.texts.insert("Home page", at: 0)
-                self.urls.append("https://www.badas-dlp.org/")
+                DispatchQueue.main.async {
+                    self.texts.insert("Home page", at: 0)
+                    self.urls.append("https://www.badas-dlp.org/")
+                }
+               
                 
             }
-            
+            updateItems()
         } catch {
             print(error.localizedDescription)
         }
@@ -178,10 +214,13 @@ class WebScrap: ObservableObject {
                 let link = element[i]
                 let text = try link.text()
                 let url = "http://www.badas-dlp.org/"
-                self.texts.append(text)
-                self.urls.append(url)
+                
+                DispatchQueue.main.async {
+                    self.texts.append(text)
+                    self.urls.append(url)
+                }
             }
-            
+            updateItems()
         } catch {
             print(error.localizedDescription)
         }
@@ -198,10 +237,13 @@ class WebScrap: ObservableObject {
                 let link = element[i]
                 let text = try link.text()
                 let url = try link.select(tagForLink).attr(attr)
-                self.texts.append(text)
-                self.urls.append(url)
+                
+                DispatchQueue.main.async {
+                    self.texts.append(text)
+                    self.urls.append(url)
+                }
             }
-            
+            updateItems()
         } catch {
             print(error.localizedDescription)
         }
@@ -217,12 +259,13 @@ class WebScrap: ObservableObject {
             for i in begin..<element.count {
                 let link = element[i]
                 let text = try link.text()
-                self.texts.append(text)
                 let url = try link.select("a").attr(attr)
-                self.urls.append(url)
-                
+                DispatchQueue.main.async {
+                    self.texts.append(text)
+                    self.urls.append(url)
+                }
             }
-            
+            updateItems()
         } catch {
             print(error.localizedDescription)
         }
@@ -238,12 +281,15 @@ class WebScrap: ObservableObject {
             for i in element.count - 11..<element.count {
                 let link = element[i]
                 let text = try link.text()
-                self.texts.append(text)
-                let url = try link.select(tagForLink).attr(attr)
-                self.urls.append(url)
                 
+                let url = try link.select(tagForLink).attr(attr)
+               
+                DispatchQueue.main.async {
+                    self.texts.append(text)
+                    self.urls.append(url)
+                }
             }
-            
+            updateItems()
         } catch {
             print(error.localizedDescription)
         }
@@ -264,20 +310,25 @@ class WebScrap: ObservableObject {
                     if linkText.contains(filterContent) || linkText.contains("Per-1:") {
                         let text = try link.outerHtml()
                         let url = try link.select("a").attr(attr)
-                        self.texts.append(text)
-                        self.urls.append(url)
+                        
+                        DispatchQueue.main.async {
+                            self.texts.append(text)
+                            self.urls.append(url)
+                        }
                     }
                 } else {
                     let linkText = try link.text()
                     if linkText.contains(filterContent) {
                         let text = try link.outerHtml()
                         let url = try link.select("a").attr(attr)
-                        self.texts.append(text)
-                        self.urls.append(url)
+                        DispatchQueue.main.async {
+                            self.texts.append(text)
+                            self.urls.append(url)
+                        }
                     }
                 }
             }
-            
+            updateItems()
         } catch {
             print(error.localizedDescription)
         }
@@ -293,12 +344,15 @@ class WebScrap: ObservableObject {
             for i in begin..<element.count {
                 let link = element[i]
                 let text = try link.text()
-                self.texts.append(text)
+                
                 let url = try link.select("a").attr(attr)
-                self.urls.append(url)
+                DispatchQueue.main.async {
+                    self.texts.append(text)
+                    self.urls.append(url)
+                }
                 
             }
-            
+            updateItems()
         } catch {
             print(error.localizedDescription)
         }
