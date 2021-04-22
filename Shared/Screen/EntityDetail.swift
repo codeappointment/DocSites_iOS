@@ -31,7 +31,7 @@ struct EntityDetail: View {
             VStack {
                 ScrollView {
                     ForEach(entity.items) { item in
-                        dataForItem(parentIndex: 1, childIndex: item.id, data: item.title)
+                        dataForItem(parentId: entity.id, childId: item.id, data: item.title)
                         Divider()
                             
                     }
