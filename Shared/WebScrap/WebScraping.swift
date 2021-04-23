@@ -119,6 +119,50 @@ extension EntityDetail {
                 })
             }
             
+        case 3:
+            switch childId {
+            case 1:
+                return AnyView(NavigationLink(destination: WebsiteView(url: "https://dghs.gov.bd/index.php/bd/")) {
+                    SiteItemView(title: data as! String)
+                })
+                
+            case 2:
+                return  AnyView(SiteItemView(title: data as! String)
+                                    .sheet(isPresented: $showModal, content: {
+                                        ScrapingListView(parentId: .constant(parentId), childId: .constant(childId), entity: .constant(entity), showWebsite: .constant(nil), loading: $webScrap.loading, scrapingItems: $webScrap.scrapingItems)
+                                        
+                                    }).onTapGesture {
+                                        showModal = true
+                                        DispatchQueue.global(qos: .userInitiated).async {
+                                            webScrap.DGHSTagTypeOne(url: "https://dghs.gov.bd/index.php/bd/", tagForText: "#system h1 a", attr: "abs:href", begin: 0)
+                                        }
+                                    })
+                
+            case 3:
+                return   AnyView(SiteItemView(title: data as! String)
+                                    .sheet(isPresented: $showModal, content: {
+                                        ScrapingListView(parentId: .constant(parentId), childId: .constant(childId), entity: .constant(entity), showWebsite: .constant(nil), loading: $webScrap.loading, scrapingItems: $webScrap.scrapingItems)
+                                        
+                                    }).onTapGesture {
+                                        showModal = true
+                                        DispatchQueue.global(qos: .userInitiated).async {
+                                            webScrap.BSMMUTag(url: "http://dghs.gov.bd/index.php/bd/?option=com_content&view=article&layout=edit&id=570", tagForText: "#system a", attr: "abs:href")
+                                           
+                                        }
+                                    })
+                
+            case 4:
+                return  AnyView(NavigationLink(destination: WebsiteView(url: "https://hrm.dghs.gov.bd/auth/signin")) {
+                    SiteItemView(title: data as! String)
+                })
+                
+           
+            default:
+                return AnyView(NavigationLink(destination: WebsiteView(url: "https://dghs.gov.bd/index.php/bd/")) {
+                    SiteItemView(title: data as! String)
+                })
+            }
+            
         default:
             return AnyView(NavigationLink(destination: WebsiteView(url: "https://www.bsmmu.edu.bd")) {
                 SiteItemView(title: data as! String)                
